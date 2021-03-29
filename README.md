@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://cdn.pixabay.com/photo/2021/03/24/20/21/20-21-07-78_960_720.png" alt="Guess It" width="200">
+  <img src="https://cdn.pixabay.com/photo/2021/03/29/03/39/03-39-20-437_960_720.png" alt="Guess It" width="200">
   <br>
   GUESS IT
   <br>

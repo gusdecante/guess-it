@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
-import colors from "./colors"
+import colors from './colors'
 
 export default createGlobalStyle`
   :root {
@@ -15,8 +15,8 @@ export default createGlobalStyle`
     padding: 0;
   }
 
-  body {
-    background-color: ${colors.background};
+  body, input, button {
+    /* background-color: ${colors.background}; */
     font-family: 'Roboto', sans-serif; //regular, bold and black
   }
 `

@@ -1,7 +1,9 @@
+import { GitHubCorner, PlayingContainer, GuessItContainer } from '../components'
 const IndexPage = () => (
-  <div>
-    <h1>Estrutura inicial do projeto</h1>
-  </div>
+  <GuessItContainer>
+    <PlayingContainer />
+    <GitHubCorner />
+  </GuessItContainer>
 )
 
 export default IndexPage
