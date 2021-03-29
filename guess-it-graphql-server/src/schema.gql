@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserType {
+  id: ID!
+  name: String
+  timeToHitTheNumber: Float
+  attemptsToHitTheNumber: Float
+  attemptsNumber: Float
+  xp: Float
+}
+
+type Query {
+  hello: String!
+  users: [UserType!]!
+  ranking: [UserType!]!
+}
+
+type Mutation {
+  createUser(input: UserInput!): UserType!
+  updateUser(input: UserInput!, id: String!): UserType!
+}
+
+input UserInput {
+  name: String
+  timeToHitTheNumber: Float
+  attemptsToHitTheNumber: Float
+  attemptsNumber: Float
+  xp: Float
+}
