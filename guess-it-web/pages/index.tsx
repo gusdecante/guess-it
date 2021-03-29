@@ -1,7 +1,13 @@
-import { GitHubCorner, PlayingContainer, GuessItContainer } from '../components'
+import {
+  GitHubCorner,
+  PlayingContainer,
+  GuessItContainer,
+  Ranking,
+} from '../components'
 const IndexPage = () => (
   <GuessItContainer>
     <PlayingContainer />
+    <Ranking />
     <GitHubCorner />
   </GuessItContainer>
 )

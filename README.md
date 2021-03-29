@@ -33,6 +33,10 @@ $ git clone https://github.com/gusdecante/guess-it.git
 
 ## 🚀 Instruções básicas - Front-End ☕
 
+### 🛎️ Importante!
+
+Ao baixar o projeto modificar o endereço do banco mongoDB - no back end - para as configurações da máquina MongooseModule.forRoot(`endereço do mongodb`), esse módulo esta dentro da pasta src/app.module.ts;
+
 ```bash
 
 

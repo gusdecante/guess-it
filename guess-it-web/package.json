@@ -8,6 +8,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "framer-motion": "^4.0.3",
     "next": "latest",
     "react": "^17.0.1",

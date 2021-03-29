@@ -16,3 +16,12 @@ export interface TimerContextData {
 export interface Active {
   active?: Boolean
 }
+
+export interface User {
+  id: string
+  name: string
+  timeToHitTheNumber: number
+  attemptsToHitTheNumber: number
+  attemptsNumber: number
+  xp: number
+}
