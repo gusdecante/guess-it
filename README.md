@@ -22,6 +22,7 @@ a ideia é que este insira um número entre 1 e 1000 e que assim possa acumular 
 - [Prettier](https://prettier.io/)
 - [Mongo](https://docs.mongodb.com/)
 - [NestJS](https://docs.nestjs.com/)
+- [ContextAPI](https://reactjs.org/docs/context.html)
 
 ## 🐑 -> 🐑 Clonar o projeto
 

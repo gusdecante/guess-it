@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import { PlayingGuess, InputPlayer, PressToPlay } from './styles'
 import { BiGame } from 'react-icons/bi'
 import { BiLogOutCircle } from 'react-icons/bi'
-import { GiDiceFire } from 'react-icons/gi'
+// import { GiDiceFire } from 'react-icons/gi'
 import { motion } from 'framer-motion'
+import { TimerProvider } from '../../contexts/TimerContext'
+import Timer from '../Timer'
 
 export default function PlayingContainer() {
   const [nameInserted, setNameInserted] = useState(false)
   const [name, setName] = useState('')
-  const [randomNumber, setRandomNumber] = useState(1)
+  // const [randomNumber, setRandomNumber] = useState(1)
+
   return (
     <PlayingGuess
       as={motion.section}
@@ -26,14 +29,15 @@ export default function PlayingContainer() {
         <h3>Nickname: {name}</h3>
       ) : (
         <p>
-          Para começar a jogar basta inserir seu nome abaixo e clicar em jogar
+          Para começar a jogar basta inserir seu nome ou apelido abaixo e clicar
+          em jogar
         </p>
       )}
       {/* <LabelPlayer htmlFor="name">Comece a jogar:</LabelPlayer> */}
       <InputPlayer
         className="name"
         type="text"
-        placeholder="nome"
+        placeholder="**nome ou apelido"
         value={name}
         onChange={(e) => setName(e.target.value)}
         disabled={nameInserted}
@@ -53,12 +57,15 @@ export default function PlayingContainer() {
         {!nameInserted ? 'Jogar' : 'Sair'}
       </PressToPlay>
       {nameInserted && (
-        <PressToPlay
-          onClick={() => setRandomNumber(Math.floor(Math.random() * 1000) + 1)}
-        >
-          <GiDiceFire />
-          Iniciar
-        </PressToPlay>
+        // <PressToPlay
+        //   onClick={() => setRandomNumber(Math.floor(Math.random() * 1000) + 1)}
+        // >
+        //   <GiDiceFire />
+        //   Iniciar
+        // </PressToPlay>
+        <TimerProvider>
+          <Timer />
+        </TimerProvider>
       )}
       <ol>
         <li>Insira um número entre 1 e 1000;</li>
