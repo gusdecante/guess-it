@@ -26,6 +26,10 @@ a ideia é que este insira um número entre 1 e 1000 e que assim possa acumular 
 
 ## 🐑 -> 🐑 Clonar o projeto
 
+### 🛎️ Importante!
+
+Ao baixar o projeto modificar o endereço do banco mongoDB - no back end - para as configurações da máquina MongooseModule.forRoot(`endereço do mongodb`), esse módulo esta dentro da pasta src/app.module.ts;
+
 ```bash
 # Clonar este repositório
 $ git clone https://github.com/gusdecante/guess-it.git
@@ -33,9 +37,7 @@ $ git clone https://github.com/gusdecante/guess-it.git
 
 ## 🚀 Instruções básicas - Front-End ☕
 
-### 🛎️ Importante!
-
-Ao baixar o projeto modificar o endereço do banco mongoDB - no back end - para as configurações da máquina MongooseModule.forRoot(`endereço do mongodb`), esse módulo esta dentro da pasta src/app.module.ts;
+O game vai rodar no endereço `localhost:3000`
 
 ```bash
 
@@ -58,6 +60,8 @@ $npm run build
 ```
 
 ## 🚀 Instruções básicas - Back-End ⚙️
+
+A API vai rodar no endereço `localhost:4000/graphql`
 
 ```bash
 # Install dependencies
