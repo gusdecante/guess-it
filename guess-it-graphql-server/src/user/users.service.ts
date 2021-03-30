@@ -25,7 +25,8 @@ export class UsersService {
 
   async findAllSorting(): Promise<User[]> {
     return this.userModel.find().sort({
-      xp: -1, // descending
+      attemptsToHitTheNumber: 1, // ascending
+      timeToHitTheNumber: 1,
     });
   }
 }

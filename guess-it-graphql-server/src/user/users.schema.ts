@@ -4,8 +4,6 @@ export const UserSchema = new mongoose.Schema({
   name: String,
   timeToHitTheNumber: Number,
   attemptsToHitTheNumber: Number,
-  attemptsNumber: Number,
-  xp: Number,
 });
 
 /*

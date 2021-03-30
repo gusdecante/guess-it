@@ -10,10 +10,6 @@ export class UserType {
   readonly timeToHitTheNumber: number; // Tempo para acertar
   @Field({ nullable: true })
   readonly attemptsToHitTheNumber: number; // Número de tentativas
-  @Field({ nullable: true })
-  readonly attemptsNumber: number; // Número sequencial da jogada
-  @Field({ nullable: true })
-  readonly xp: number; // Cálculo do xp
 }
 
 /*

@@ -7,8 +7,6 @@ type UserType {
   name: String
   timeToHitTheNumber: Float
   attemptsToHitTheNumber: Float
-  attemptsNumber: Float
-  xp: Float
 }
 
 type Query {
@@ -26,6 +24,4 @@ input UserInput {
   name: String
   timeToHitTheNumber: Float
   attemptsToHitTheNumber: Float
-  attemptsNumber: Float
-  xp: Float
 }
