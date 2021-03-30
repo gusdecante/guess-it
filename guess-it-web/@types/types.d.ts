@@ -9,8 +9,15 @@ export interface TimerContextData {
   seconds: number
   hasFinished: boolean
   isActive: boolean
+  randomNumber: number
+  numberOfAttempts: number
+  timeToHit: number[]
+  name: string
+  setNewName: (newName: string) => void
   startTimer: () => void
   resetTimer: () => void
+  compareTwoNumbers: (operation: string, insertedNumber: number) => void
+  addUser: () => void
 }
 
 export interface Active {
@@ -22,6 +29,4 @@ export interface User {
   name: string
   timeToHitTheNumber: number
   attemptsToHitTheNumber: number
-  attemptsNumber: number
-  xp: number
 }

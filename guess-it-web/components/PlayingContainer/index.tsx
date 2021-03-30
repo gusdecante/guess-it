@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { PlayingGuess, InputPlayer, PressToPlay } from './styles'
 import { BiGame } from 'react-icons/bi'
 import { BiLogOutCircle } from 'react-icons/bi'
 // import { GiDiceFire } from 'react-icons/gi'
 import { motion } from 'framer-motion'
-import { TimerProvider } from '../../contexts/TimerContext'
+import { TimerContext } from '../../contexts/TimerContext'
 import Timer from '../Timer'
 
 export default function PlayingContainer() {
   const [nameInserted, setNameInserted] = useState(false)
-  const [name, setName] = useState('')
-  // const [randomNumber, setRandomNumber] = useState(1)
+  // const [name, setName] = useState('')
+  const { name, setNewName, addUser } = useContext(TimerContext)
 
   return (
     <PlayingGuess
@@ -39,7 +39,7 @@ export default function PlayingContainer() {
         type="text"
         placeholder="**nome ou apelido"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => setNewName(e.target.value)}
         disabled={nameInserted}
       />
       <PressToPlay
@@ -48,7 +48,8 @@ export default function PlayingContainer() {
           !nameInserted
             ? () => name.length !== 0 && setNameInserted(!nameInserted)
             : () => {
-                setName('')
+                addUser()
+                setNewName('')
                 setNameInserted(!nameInserted)
               }
         }
@@ -56,17 +57,7 @@ export default function PlayingContainer() {
         {!nameInserted ? <BiGame /> : <BiLogOutCircle />}
         {!nameInserted ? 'Jogar' : 'Sair'}
       </PressToPlay>
-      {nameInserted && (
-        // <PressToPlay
-        //   onClick={() => setRandomNumber(Math.floor(Math.random() * 1000) + 1)}
-        // >
-        //   <GiDiceFire />
-        //   Iniciar
-        // </PressToPlay>
-        <TimerProvider>
-          <Timer />
-        </TimerProvider>
-      )}
+      {nameInserted && <Timer />}
       <ol>
         <li>Insira um número entre 1 e 1000;</li>
         <li>Espere o computador gerar um número;</li>

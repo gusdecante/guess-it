@@ -87,3 +87,77 @@ export const GenericButton = styled.button<Active>`
           }
         `}
 `
+export const ContainerGuesses = styled.div`
+  width: 100%;
+
+  .attempts {
+    background: ${colors.green};
+  }
+`
+
+export const Guess = styled.h1`
+  width: 100%;
+  height: 2em;
+  background-color: black;
+  text-align: center;
+  padding: 0.5em;
+`
+
+export const MessageGuess = styled.p`
+  background-color: ${colors.orangeBtn};
+  color: ${colors.blue};
+`
+
+export const InputNumberGuess = styled.input`
+  margin: 0 auto;
+  height: 2.5em;
+  width: 100%;
+`
+
+export const ContainerButtonsAttempt = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5em;
+
+  .less {
+    background-color: ${colors.green};
+  }
+  .equal {
+    background-color: ${colors.blue};
+  }
+  .greater {
+    background-color: ${colors.orangeBtn};
+  }
+
+  div h4 {
+    text-align: center;
+    text-decoration: underline;
+  }
+`
+
+export const RoundButtonAttempt = styled.button`
+  border-radius: 50%;
+  padding: 2em;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+`
+export const BoxShadowAttemptsToHit = styled.div`
+  box-shadow: 1px 1px 1px black;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+
+  span {
+    border: 1px solid white;
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  span strong {
+    background: ${colors.blue};
+  }
+`

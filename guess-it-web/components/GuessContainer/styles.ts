@@ -5,6 +5,7 @@ const GuessItContainer = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 2em;
+  min-height: 100vh;
 
   background-image: url('/assets/background-guess-it-640x480.jpg');
   background-repeat: no-repeat;

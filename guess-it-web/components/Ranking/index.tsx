@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { api, ranking } from '../../services/api'
 import axios from 'axios'
 import { RankingContainer, RankingGrid } from './styles'
+import { TimerContext } from '../../contexts/TimerContext'
 
 import { User } from '../../@types/types'
 
 export default function Ranking() {
   const [data, setData] = useState({ ranking: [] })
+  const { timeToHit } = useContext(TimerContext)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +22,7 @@ export default function Ranking() {
     }
 
     fetchData()
-  })
+  }, [timeToHit])
 
   return (
     <RankingContainer>
@@ -28,18 +30,14 @@ export default function Ranking() {
       <RankingGrid>
         <p>Nome</p>
         <p>Número de tentativas</p>
-        <p>Tentativas para acertar</p>
-        <p>Tempo para acertar</p>
-        <p>Xp</p>
+        <p>Tempo de acerto(segundos)</p>
         {data && (
           <>
             {data.ranking.map((user: User) => (
               <>
                 <span>{user.name || '*'}</span>
-                <span>{user.attemptsNumber || '*'}</span>
                 <span>{user.attemptsToHitTheNumber || '*'}</span>
                 <span>{user.timeToHitTheNumber || '*'}</span>
-                <span>{user.xp || '*'}</span>
               </>
             ))}
           </>
