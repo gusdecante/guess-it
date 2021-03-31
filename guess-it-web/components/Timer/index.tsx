@@ -65,7 +65,7 @@ export default function Timer() {
           <MessageGuess>
             Faça seu palpite, digite um <strong>número</strong> abaixo e diga se
             ele é <strong>maior, menor ou igual</strong> ao gerado pelo
-            computador {randomNumber}
+            computador
           </MessageGuess>
           <MessageGuess className="attempts">
             Número de Tentativas até agora: <strong>{numberOfAttempts}</strong>
